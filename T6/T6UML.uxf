@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>288</x>
+      <y>513</y>
+      <w>189</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>BARCOS
+--
+IdBarco int PK
+NumMatricula number
+nombreBarco varchar(50)
+NumAmarre number(20)
+cuotaPago number(10,2)
+--
+IdSocio (SOCIOS) int FK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>63</x>
+      <y>324</y>
+      <w>189</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>SOCIOS
+--
+IdSocio int PK
+telefono number(8)
+TipoSocio varchar(10)
+--
+IdPersona(PERSONA) int FK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>324</x>
+      <y>135</y>
+      <w>189</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>PERSONA
+--
+IdPersona int PK
+nombre varchar(80)
+apellido varchar(80)
+DPI number(13)
+Direccion varchar(80)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>297</y>
+      <w>189</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>PATRONES
+--
+IdPatron int PK
+Empresa varchar(80)
+
+--
+IdPersona (PERSONA) int FK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>621</x>
+      <y>531</y>
+      <w>189</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>SALIDAS
+--
+IdSalida int PK
+FechaSalida DATE
+Destino varchar(80)
+--
+IdBarco(BARCOS) int FK
+IdPatron(PATRONES) int FK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>144</x>
+      <y>189</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>216</y>
+      <w>180</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;10.0;180.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>675</x>
+      <y>414</y>
+      <w>27</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>567</y>
+      <w>171</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>441</y>
+      <w>126</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0;120.0;140.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>370</y>
+      <w>270</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Venta
+--
+-Id_Venta int PK
+-FechaEntrega date
+-Total number(12,5)
+-modoPago varchar(50)
+-matricula varchar(20)
+--
+NumeroDeChasis(Automovil) int FK
+Id_Cliente(Cliente) int FK
+IdVendedor(Vendedor) int FK
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>180</x>
+      <y>90</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>tbConcesionario
+
+--
+-idConcesionario int PK
+-nombre varchar(50)
+-direccion varchar(200)
+-tipo varchar(50)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>70</y>
+      <w>270</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Automovil
+
+--
+-NumeroDeChasis int PK
+-marca varchar(50)
+-Modelo varchar(50)
+-precio number(10,2)
+-descuento number(10,2)
+--
+IdConcesionario (tbConsesionario) int FK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>690</x>
+      <y>330</y>
+      <w>270</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>DatosTecnicos
+--
+-IdDato int PK
+-PotenciaFiscal varchar(50)
+-cilindrada varchar(50)
+-otrosDatos varchar(100)
+--
+NumeroDeChasis (Automovil) int FK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>300</y>
+      <w>270</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Vendedor
+--
+-IdVendedor int PK
+-nombreVendedor varchar(50)
+-dpi varchar(50)
+-domicilio varchar(50)
+--
+IdConcesionario (tbConsesionario) int FK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>100</y>
+      <w>270</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Automovil_Extras
+--
+idAutomovilExtra int PK
+--
+NumeroDeChasis (Automovil) int FK
+IdExtra (Extras) int FK</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>520</y>
+      <w>270</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Cliente
+--
+-Id_Cliente int PK
+-nombreVendedor varchar(50)
+-dpi varchar(50)
+-domicilio varchar(50)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>980</x>
+      <y>300</y>
+      <w>270</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Extras
+--
+-IdExtra int PK
+-descripcion varchar(250)
+-precioExtra number(10,2)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>150</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>250</x>
+      <y>210</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1050</x>
+      <y>220</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>170</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>220</y>
+      <w>200</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;180.0;50.0;180.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>220</y>
+      <w>30</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>340</y>
+      <w>170</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0;150.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>530</y>
+      <w>200</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;180.0;70.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>800</x>
+      <y>600</y>
+      <w>420</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>RUDY JASER SAMUEL CASTELLANOS LOPEZ 1690-22-9776</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
